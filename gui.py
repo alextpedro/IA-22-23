@@ -18,6 +18,7 @@ from ga.genetic_operators.recombination2 import Recombination2
 from ga.genetic_operators.recombination_pmx import RecombinationPMX
 from ga.genetic_operators.mutation_insert import MutationInsert
 from ga.genetic_algorithm_thread import GeneticAlgorithmThread
+from warehouse.cell import Cell
 from warehouse.warehouse_agent_search import WarehouseAgentSearch, read_state_from_txt_file
 from warehouse.warehouse_experiments_factory import WarehouseExperimentsFactory
 from warehouse.warehouse_problemforGA import WarehouseProblemGA
@@ -624,24 +625,32 @@ class SearchSolver(threading.Thread):
         for i in range(len(self.agent.pairs)):
             # Problem novo:
             # Em cada par colocar o fk na cell1
-            fk = self.agent.pairs[i].cell1
+            fk: Cell = self.agent.pairs[i].cell1
 
             # fazer um deepcopy do estado inicial
-            estado_inicial: WarehouseState = copy.deepcopy(self.initial_state)
-            estado_inicial.line_forklift = fk.
+            estado_inicial: WarehouseState = copy.deepcopy(self.agent.initial_environment) #self.initial_state da erro, este fica a correr sem dar sinal
+            estado_inicial.line_forklift = fk.line
+            estado_inicial.column_forklift = fk.column
 
             # Dizer que cell2 é o goal_state -> ATENÇÃO fazer contas para célula adjacente
-            if self.agent.pairs[i].cell2.column - 1 is constants.EMPTY:
-                goal_state = self.agent.pairs[i].cell2.column - 1
-            else:
-                goal_state = self.agent.pairs[i].cell2.column + 1
+            goal_state: Cell = Cell(self.agent.pairs[i].cell2.line, self.agent.pairs[i].cell2.column)
+
+            # goal_state = self.agent.pairs[i].cell2.column - 1
+            # goal_state = self.agent.pairs[i].cell2.column + 1
+            if self.agent.pairs[i].cell2.column - 1 is constants.PRODUCT:
+                if estado_inicial.matrix[self.agent.pairs[i].cell2.line][self.agent.pairs[i].cell2.column - 1] is constants.EMPTY:
+                    goal_state.column = self.agent.pairs[i].cell2.column - 1
+                else:
+                    goal_state.column = self.agent.pairs[i].cell2.column + 1
 
             problem = WarehouseProblemSearch(estado_inicial, goal_state)
             # aplicar o shearch method com o goal_state
             self.agent.solve_problem(problem)
             # na solução ir buscar o custo -> este custo vai ser a distancia entre as células dos pares
-            self.agent.pairs[i].value = self.agent.solution
-            # imprimir a distancia em frente aos pares para mostrar
+            self.agent.pairs[i].value = self.agent.solution.cost
+
+        # imprimir a distancia em frente aos pares para mostrar
+        self.gui.text_problem.insert(tk.END, str(self.agent.initial_environment) + "\n" + str(self.agent))
 
         self.agent.search_method.stopped=True
         self.gui.problem_ga = WarehouseProblemGA(self.agent)
