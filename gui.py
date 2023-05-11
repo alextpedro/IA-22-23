@@ -18,6 +18,7 @@ from ga.genetic_operators.recombination2 import Recombination2
 from ga.genetic_operators.recombination_pmx import RecombinationPMX
 from ga.genetic_operators.mutation_insert import MutationInsert
 from ga.genetic_algorithm_thread import GeneticAlgorithmThread
+from search_methods.solution import Solution
 from warehouse.cell import Cell
 from warehouse.warehouse_agent_search import WarehouseAgentSearch, read_state_from_txt_file
 from warehouse.warehouse_experiments_factory import WarehouseExperimentsFactory
@@ -645,9 +646,9 @@ class SearchSolver(threading.Thread):
 
             problem = WarehouseProblemSearch(estado_inicial, goal_state)
             # aplicar o shearch method com o goal_state
-            self.agent.solve_problem(problem)
+            solution = self.agent.solve_problem(problem)
             # na solução ir buscar o custo -> este custo vai ser a distancia entre as células dos pares
-            self.agent.pairs[i].value = self.agent.solution.cost
+            self.agent.pairs[i].value = solution.cost
 
         # imprimir a distancia em frente aos pares para mostrar
         self.gui.text_problem.insert(tk.END, str(self.agent.initial_environment) + "\n" + str(self.agent))
