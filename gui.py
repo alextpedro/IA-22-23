@@ -21,6 +21,7 @@ from ga.genetic_algorithm_thread import GeneticAlgorithmThread
 from warehouse.warehouse_agent_search import WarehouseAgentSearch, read_state_from_txt_file
 from warehouse.warehouse_experiments_factory import WarehouseExperimentsFactory
 from warehouse.warehouse_problemforGA import WarehouseProblemGA
+from warehouse.warehouse_problemforSearch import WarehouseProblemSearch
 from warehouse.warehouse_state import WarehouseState
 
 matplotlib.use("TkAgg")
@@ -619,12 +620,28 @@ class SearchSolver(threading.Thread):
 
     def run(self):
         # TODO calculate pairs distances
-        # Para cada par
-            # usar A* para calcular distância
-        for pair in self.agent.pairs:
-            #agent run astar
+        # Percorrer todos os pares:
+        for i in range(len(self.agent.pairs)):
+            # Problem novo:
+            # Em cada par colocar o fk na cell1
+            fk = self.agent.pairs[i].cell1
 
+            # fazer um deepcopy do estado inicial
+            estado_inicial: WarehouseState = copy.deepcopy(self.initial_state)
+            estado_inicial.line_forklift = fk.
 
+            # Dizer que cell2 é o goal_state -> ATENÇÃO fazer contas para célula adjacente
+            if self.agent.pairs[i].cell2.column - 1 is constants.EMPTY:
+                goal_state = self.agent.pairs[i].cell2.column - 1
+            else:
+                goal_state = self.agent.pairs[i].cell2.column + 1
+
+            problem = WarehouseProblemSearch(estado_inicial, goal_state)
+            # aplicar o shearch method com o goal_state
+            self.agent.solve_problem(problem)
+            # na solução ir buscar o custo -> este custo vai ser a distancia entre as células dos pares
+            self.agent.pairs[i].value = self.agent.solution
+            # imprimir a distancia em frente aos pares para mostrar
 
         self.agent.search_method.stopped=True
         self.gui.problem_ga = WarehouseProblemGA(self.agent)
