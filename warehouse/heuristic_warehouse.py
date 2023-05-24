@@ -9,7 +9,7 @@ class HeuristicWarehouse(Heuristic[WarehouseProblemSearch, WarehouseState]):
         super().__init__()
 
     def compute(self, state: WarehouseState) -> float:
-        # TODO: Temp return value.
+        # TODO: Warehouse heuristic. Temp return value.
         return 1
 
     def __str__(self):

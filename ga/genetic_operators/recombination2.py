@@ -7,7 +7,7 @@ class Recombination2(Recombination):
         super().__init__(probability)
 
     def recombine(self, ind1: Individual, ind2: Individual) -> None:
-        # TODO
+        # TODO Recombine 2
         pass
 
     def __str__(self):

@@ -5,13 +5,12 @@ from warehouse.warehouse_individual import WarehouseIndividual
 
 class WarehouseProblemGA(Problem):
     def __init__(self, agent_search: WarehouseAgentSearch):
-        # TODO
         self.forklifts = agent_search.forklifts
         self.products = agent_search.products
         self.agent_search = agent_search
 
     def generate_individual(self) -> "WarehouseIndividual":
-        # TODO
+        # TODO: Generate warehouse individuals for problem
         pass
 
     def __str__(self):
