@@ -28,14 +28,16 @@ class WarehouseState(State[Action]):
                     self.column_exit = j
 
     def can_move_up(self) -> bool:
+        col_up = self.column_forklift - 1
         if col_up is not constants.SHELF and col_up < self.columns:
-
+            return True
         return False
 
 
     def can_move_right(self) -> bool:
+        line_right = self.line_forklift + 1
         if line_right is not constants.SHELF and line_right > self.rows:
-
+            return True
         return False
 
 
