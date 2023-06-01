@@ -30,7 +30,7 @@ class WarehouseState(State[Action]):
         line_up = self.line_forklift - 1
         if line_up >= 0:
             cell_up = self.matrix[line_up][self.column_forklift]
-            if cell_up is constants.EMPTY or cell_up is constants.EXIT:
+            if cell_up == constants.EMPTY or cell_up == constants.EXIT:
                 return True
         return False
 
@@ -38,7 +38,7 @@ class WarehouseState(State[Action]):
         col_right = self.column_forklift + 1
         if col_right < self.columns:
             cell_right = self.matrix[self.line_forklift][col_right]
-            if cell_right is constants.EMPTY or cell_right is constants.EXIT:
+            if cell_right == constants.EMPTY or cell_right == constants.EXIT:
                 return True
         return False
 
@@ -46,7 +46,7 @@ class WarehouseState(State[Action]):
         line_down = self.line_forklift + 1
         if line_down < self.rows:
             cell_down = self.matrix[line_down][self.column_forklift]
-            if cell_down is constants.EMPTY or cell_down is constants.EXIT:
+            if cell_down == constants.EMPTY or cell_down == constants.EXIT:
                 return True
         return False
 
@@ -54,7 +54,7 @@ class WarehouseState(State[Action]):
         col_left = self.column_forklift - 1
         if col_left >= 0:
             cell_left = self.matrix[self.line_forklift][col_left]
-            if cell_left is constants.EMPTY or cell_left is constants.EXIT:
+            if cell_left == constants.EMPTY or cell_left == constants.EXIT:
                 return True
         return False
 

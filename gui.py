@@ -634,17 +634,28 @@ class SearchSolver(threading.Thread):
             estado_inicial.column_forklift = fk.column
 
             # Dizer que cell2 é o goal_state -> ATENÇÃO fazer contas para célula adjacente
-            goal_state: Cell = Cell(self.agent.pairs[i].cell2.line, self.agent.pairs[i].cell2.column)
+            cell2_line = self.agent.pairs[i].cell2.line
+            cell2_column = self.agent.pairs[i].cell2.column
+
+            if cell2_column-1 >= 0:
+                goal_cell_left = estado_inicial.matrix[cell2_line][cell2_column-1]
+            if cell2_column+1 < estado_inicial.columns:
+                goal_cell_right = estado_inicial.matrix[cell2_line][cell2_column+1]
+
+            if goal_cell_left == constants.EMPTY:
+                goal_cell = Cell(cell2_line, cell2_column-1)
+            elif goal_cell_right == constants.EMPTY:
+                goal_cell = Cell(cell2_line, cell2_column+1)
 
             # goal_state = self.agent.pairs[i].cell2.column - 1
             # goal_state = self.agent.pairs[i].cell2.column + 1
-            if self.agent.pairs[i].cell2.column - 1 is constants.PRODUCT:
-                if estado_inicial.matrix[self.agent.pairs[i].cell2.line][self.agent.pairs[i].cell2.column - 1] is constants.EMPTY:
-                    goal_state.column = self.agent.pairs[i].cell2.column - 1
-                else:
-                    goal_state.column = self.agent.pairs[i].cell2.column + 1
+            # if self.agent.pairs[i].cell2.column - 1 is constants.PRODUCT:
+            #     if estado_inicial.matrix[self.agent.pairs[i].cell2.line][self.agent.pairs[i].cell2.column - 1] is constants.EMPTY:
+            #         goal_state.column = self.agent.pairs[i].cell2.column - 1
+            #     else:
+            #         goal_state.column = self.agent.pairs[i].cell2.column + 1
 
-            problem = WarehouseProblemSearch(estado_inicial, goal_state)
+            problem = WarehouseProblemSearch(estado_inicial, goal_cell)
             # aplicar o shearch method com o goal_state
             solution = self.agent.solve_problem(problem)
             # na solução ir buscar o custo -> este custo vai ser a distancia entre as células dos pares
