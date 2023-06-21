@@ -27,12 +27,7 @@ class WarehouseProblemSearch(Problem[WarehouseState]):
         return successor
 
     def is_goal(self, state: WarehouseState) -> bool:
-        fk: Cell = Cell(state.line_forklift, state.column_forklift)
-
-        if fk is self.goal_position:
+        if state.line_forklift == self.goal_position.line and state.column_forklift == self.goal_position.column:
             return True
-        else:
-            return False
-
-        #TODO: Improve goal finding
+        return False
 
