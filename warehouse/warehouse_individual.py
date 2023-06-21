@@ -1,13 +1,25 @@
 from ga.individual_int_vector import IntVectorIndividual
 
+SEPARATOR = 0
+
 class WarehouseIndividual(IntVectorIndividual):
 
     def __init__(self, problem: "WarehouseProblem", num_genes: int):
         super().__init__(problem, num_genes)
+        self.genome = []
+        self.fitness = 0
+
+    def initialize(self):
+        # Ideia: agente - produtos - separador e repete
+        for forklift in range(len(self.problem.forklifts)):
+            self.genome.append(forklift)
+            self.genome.append(self.problem.products) # talvez randomizar ordem?
+            self.genome.append(SEPARATOR)
+        pass
 
     def compute_fitness(self) -> float:
         # TODO: Compute fitness of WarehouseIndividual
-        return 0
+        return 1
 
     def obtain_all_path(self):
         # TODO Obtain all path
