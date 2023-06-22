@@ -10,8 +10,10 @@ class HeuristicWarehouse(Heuristic[WarehouseProblemSearch, WarehouseState]):
 
     def compute(self, state: WarehouseState) -> float:
         # TODO: Warehouse heuristic. Temp return value.
-        return 1
+        # Ir passar a posicao objtivo através do problem para o calculate?
+        return state.calculate_distance(self.problem.goal_position)
+        # return 1
 
     def __str__(self):
-        return "# TODO"
+        return "Distancia entre a prateleira e a Exit \n"
 

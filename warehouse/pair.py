@@ -4,6 +4,7 @@ class Pair:
         self.cell2 = cell2
         self.value = 0
         # TODO: Save path (list of cells)
+        self.positions = []
 
     def hash(self):
         return str(self.cell1.line) + "_" + str(self.cell1.column) + "_" + str(

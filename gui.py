@@ -320,7 +320,7 @@ class Window(tk.Tk):
             Recombination2(float(self.entry_recombination_prob.get())) if recombination_methods_index == 1 else \
                 Recombination3(float(self.entry_recombination_prob.get()))
 
-        mutation_methods_index = self.combo_recombination_methods.current()
+        mutation_methods_index = self.combo_mutation_methods.current()
         mutation_method = MutationInsert(
             float(self.entry_mutation_prob.get())) if mutation_methods_index == 0 else \
             Mutation2(float(self.entry_mutation_prob.get())) if mutation_methods_index == 1 else \
@@ -627,39 +627,33 @@ class SearchSolver(threading.Thread):
             # Problem novo:
             # Em cada par colocar o fk na cell1
             fk: Cell = self.agent.pairs[i].cell1
+            goal: Cell = copy.copy(self.agent.pairs[i].cell2)
 
             # fazer um deepcopy do estado inicial
-            estado_inicial: WarehouseState = copy.deepcopy(self.agent.initial_environment) #self.initial_state da erro, este fica a correr sem dar sinal
-            estado_inicial.line_forklift = fk.line
-            estado_inicial.column_forklift = fk.column
+            estado_inicial: WarehouseState = copy.copy(self.agent.initial_environment)
+            if (fk in self.agent.forklifts):
+                estado_inicial.line_forklift = fk.line
+                estado_inicial.column_forklift = fk.column
+            else:
+                if fk.column +1 < estado_inicial.columns and estado_inicial.matrix[fk.line][fk.column + 1] == constants.EMPTY:
+                    estado_inicial.line_forklift = fk.line
+                    estado_inicial.column_forklift = fk.column + 1
+                else:
+                    estado_inicial.line_forklift = fk.line
+                    estado_inicial.column_forklift = fk.column - 1
 
-            # Dizer que cell2 é o goal_state -> ATENÇÃO fazer contas para célula adjacente
-            cell2_line = self.agent.pairs[i].cell2.line
-            cell2_column = self.agent.pairs[i].cell2.column
+            if goal != self.agent.exit:
+                if goal.column + 1 < estado_inicial.columns and estado_inicial.matrix[goal.line][goal.column + 1] == constants.EMPTY:
+                    goal.column += 1
+                else:
+                    goal.column -= 1
 
-            if cell2_column-1 >= 0:
-                goal_cell_left = estado_inicial.matrix[cell2_line][cell2_column-1]
-            if cell2_column+1 < estado_inicial.columns:
-                goal_cell_right = estado_inicial.matrix[cell2_line][cell2_column+1]
-
-            if goal_cell_left == constants.EMPTY:
-                goal_cell = Cell(cell2_line, cell2_column-1)
-            elif goal_cell_right == constants.EMPTY:
-                goal_cell = Cell(cell2_line, cell2_column+1)
-
-            # goal_state = self.agent.pairs[i].cell2.column - 1
-            # goal_state = self.agent.pairs[i].cell2.column + 1
-            # if self.agent.pairs[i].cell2.column - 1 is constants.PRODUCT:
-            #     if estado_inicial.matrix[self.agent.pairs[i].cell2.line][self.agent.pairs[i].cell2.column - 1] is constants.EMPTY:
-            #         goal_state.column = self.agent.pairs[i].cell2.column - 1
-            #     else:
-            #         goal_state.column = self.agent.pairs[i].cell2.column + 1
-
-            problem = WarehouseProblemSearch(estado_inicial, goal_cell)
+            problem = WarehouseProblemSearch(estado_inicial, goal)
             # aplicar o shearch method com o goal_state
             solution = self.agent.solve_problem(problem)
             # na solução ir buscar o custo -> este custo vai ser a distancia entre as células dos pares
             self.agent.pairs[i].value = solution.cost
+            self.agent.pairs[i].positions = solution.positions
 
         # imprimir a distancia em frente aos pares para mostrar
         self.gui.text_problem.insert(tk.END, str(self.agent.initial_environment) + "\n" + str(self.agent))
