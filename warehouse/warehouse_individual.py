@@ -1,4 +1,7 @@
 from ga.individual_int_vector import IntVectorIndividual
+from warehouse.cell import Cell
+import heapq
+
 
 class WarehouseIndividual(IntVectorIndividual):
 
@@ -7,39 +10,34 @@ class WarehouseIndividual(IntVectorIndividual):
 
     def compute_fitness(self) -> float:
         # TODO: Compute fitness of WarehouseIndividual
-        # Colocar a fitness a 0
-        self.fitness = 0
 
-        # obter a fitness: será a distância do caminho entre a cell1 e cell2
+        fk = self.problem.agent_search.forklifts
+        products = self.problem.agent_search.products
 
-        # percorrer o genoma
-            # fitness =
+        fitness = self.obtain_all_path(fk, self.genome[0] - 1)
 
-        # Variáveis
-        # cellAgent = problem.                      # celula do fk ou agente
-        # shelves = problem.                        # onde tem shelves
-        # exit = problem.                           # saida
+        for i in range(len(self.genome)):
+            fitness += self.obtain_all_path(self.problem.products[self.genome[i] - 1],
+                                            self.problem.products[self.genome[i + 1] - 1])
 
-        # Obter a fitness
-        # fitness = obtain_all_path(cellAgent, shelves[genome[0] - 1])
+        fitness += self.obtain_all_path(self.problem.products[self.genome[len(self.genome) - 1] - 1])
+        # 1 3 5 2 4
         #
-        # for i in range(len(genome) - 1):
-        #     fitness += obtain_all_path(shelves[genome[i] - 1], shelves[genome[i + 1] - 1])
+        # 1 7 2 3 4 5 6
         #
-        # fitness += obtain_all_path(shelves[genome[len(genome) - 1] - 1], exit)
+        # [1  - par/forklift - produto1)  + par(produto 1 - exit)
+        # [2 3 4 5 - par/forklift - produto2)  +...+ par(produto 5 - exit)
+        # [] - par (forklift - exit)
+        return fitness
 
-        # 1 - percorrer genoma e separar produtos
-
-        return 0 #fitness
-
-    def obtain_all_path(self): # tem de receber a cell1 e cell2?
-        # TODO Obtain all path - distância entre as prateleiras do pedido?
+    def obtain_all_path(self, cell1: Cell, cell2: Cell): # tem de receber a cell1 e cell2?
+        # TODO Obtain all path - distância entre as produtos do pedido
         # Percorre os pares de células:
-        # for pair in self.agent.pairs:
-        #     if (pair.cell1 == cell1 and pair.cell2 == cell2) or ( cell2 == pair.cell1 and cell1 == pair.cell2):
-        #         return self.agent.pairs.value
-        # return -1
-        pass
+        for pair in self.problem.agent_search.pairs:
+            if (pair.cell1 == cell1 and pair.cell2 == cell2) or ( cell2 == pair.cell1 and cell1 == pair.cell2):
+                return self.problem.agent_search.pairs.value
+        return -1
+
 
     def __str__(self):
         string = 'Fitness: ' + f'{self.fitness}' + '\n'

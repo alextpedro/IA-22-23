@@ -16,15 +16,15 @@ class Recombination2(Recombination):
 
         while True:
             indexes.append(idx)
-            item = ind2.getGene(idx)
-            idx = ind1.getIndexof(item)
+            item = ind2.genome[idx]
+            idx = ind1.index(item)
             if idx in indexes:
                 break
 
         for i in range(len(indexes)):
-            aux = ind1.getGene(indexes[i])
-            ind1.setGene(indexes[i], ind2.getGene(indexes[i]))
-            ind2.setGene(indexes[i], aux)
+            aux = ind1.genome[indexes[i]]
+            ind1.genome[indexes[i]] = ind2.genome[indexes[i]]
+            ind2.genome[indexes[i]] = aux
 
         indexes.clear()
 
