@@ -10,9 +10,10 @@ class WarehouseProblemGA(Problem):
         self.agent_search = agent_search
 
     def generate_individual(self) -> "WarehouseIndividual":
+
         # TODO: Generate warehouse individuals for problem
         # acho que vou ao WarehouseIndividual e passo quantidade de produtos a ir buscar as prateleiras?
-        return WarehouseIndividual(self, self.products.count()+self.forklifts.count()-1)
+        # return WarehouseIndividual(self, self.products.count()+self.forklifts.count()-1)
 
         # 1 3 5 2 4
         #
@@ -21,11 +22,13 @@ class WarehouseProblemGA(Problem):
         # [1  - par/forklift - produto1)  + par(produto 1 - exit)
         # [2 3 4 5 - par/forklift - produto2)  +...+ par(produto 5 - exit)
         # [] - par (forklift - exit)
-
-
         # vetor de inteiro para representar genoma
 
-        pass
+        num_genes = len(self.forklifts) + len(self.products) + len(self.forklifts)-1  # agents + products + separators
+        new_individual = WarehouseIndividual(self, num_genes)
+        new_individual.initialize()
+        return new_individual
+
 
     def __str__(self):
         string = "# of forklifts: "
