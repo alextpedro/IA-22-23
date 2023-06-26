@@ -1,6 +1,6 @@
 
 from abc import abstractmethod
-from random import random
+from random import shuffle
 
 from ga.problem import Problem
 from ga.individual import Individual
@@ -14,8 +14,9 @@ class IntVectorIndividual(Individual):
         # ver o shuffle para baralhar vetor
         # print do self.genome para ver se está ok
         vetor_aux = list(range(1,  num_genes + 1))
-        self.genome = random.shuffle(vetor_aux)
-        print(self.genome)
+        shuffle(vetor_aux)
+        self.genome = vetor_aux
+        # print(self.genome)
 
     def swap_genes(self, other, index: int):
         aux = self.genome[index]
