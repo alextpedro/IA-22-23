@@ -1,6 +1,6 @@
-Runs: 2
+Runs: 50
 
-Population_size: 100
+Population_size: 30
 
 Max_generations: 100
 
