@@ -10,11 +10,11 @@ import queue
 import threading
 
 import constants
-from ga.genetic_operators.mutation2 import Mutation2
-from ga.genetic_operators.mutation3 import Mutation3
-from ga.genetic_operators.recombination3 import Recombination3
+from ga.genetic_operators.mutationswitchandshift import MutationSwitchandShift
+from ga.genetic_operators.mutationpartialinversion import MutationPartialInversion
+from ga.genetic_operators.recombinationcrossoverorder1 import RecombinationCrossoverOrder1
 from ga.selection_methods.tournament import Tournament
-from ga.genetic_operators.recombination2 import Recombination2
+from ga.genetic_operators.recombinationcrossovercycle import RecombinationCrossoverCycle
 from ga.genetic_operators.recombination_pmx import RecombinationPMX
 from ga.genetic_operators.mutation_insert import MutationInsert
 from ga.genetic_algorithm_thread import GeneticAlgorithmThread
@@ -317,14 +317,14 @@ class Window(tk.Tk):
         recombination_methods_index = self.combo_recombination_methods.current()
         recombination_method = RecombinationPMX(
             float(self.entry_recombination_prob.get())) if recombination_methods_index == 0 else \
-            Recombination2(float(self.entry_recombination_prob.get())) if recombination_methods_index == 1 else \
-                Recombination3(float(self.entry_recombination_prob.get()))
+            RecombinationCrossoverCycle(float(self.entry_recombination_prob.get())) if recombination_methods_index == 1 else \
+                RecombinationCrossoverOrder1(float(self.entry_recombination_prob.get()))
 
         mutation_methods_index = self.combo_mutation_methods.current()
         mutation_method = MutationInsert(
             float(self.entry_mutation_prob.get())) if mutation_methods_index == 0 else \
-            Mutation2(float(self.entry_mutation_prob.get())) if mutation_methods_index == 1 else \
-                Mutation3(float(self.entry_mutation_prob.get()))
+            MutationSwitchandShift(float(self.entry_mutation_prob.get())) if mutation_methods_index == 1 else \
+                MutationPartialInversion(float(self.entry_mutation_prob.get()))
 
         self.genetic_algorithm = GeneticAlgorithmThread(
             int(self.entry_seed.get()),

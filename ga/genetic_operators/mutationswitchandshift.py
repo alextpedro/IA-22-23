@@ -3,7 +3,7 @@ from random import random
 from ga.individual_int_vector import IntVectorIndividual
 from ga.genetic_operators.mutation import Mutation
 
-class Mutation2(Mutation):
+class MutationSwitchandShift(Mutation):
     def __init__(self, probability):
         super().__init__(probability)
 

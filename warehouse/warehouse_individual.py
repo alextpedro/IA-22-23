@@ -21,13 +21,7 @@ class WarehouseIndividual(IntVectorIndividual):
                                             self.problem.products[self.genome[i + 1] - 1])
 
         fitness += self.obtain_all_path(self.problem.products[self.genome[len(self.genome) - 1] - 1])
-        # 1 3 5 2 4
-        #
-        # 1 7 2 3 4 5 6
-        #
-        # [1  - par/forklift - produto1)  + par(produto 1 - exit)
-        # [2 3 4 5 - par/forklift - produto2)  +...+ par(produto 5 - exit)
-        # [] - par (forklift - exit)
+
         return fitness
 
     def obtain_all_path(self, cell1: Cell, cell2: Cell): # tem de receber a cell1 e cell2?

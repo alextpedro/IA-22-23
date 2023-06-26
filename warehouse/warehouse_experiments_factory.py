@@ -1,18 +1,23 @@
+import copy
+
+import constants
 from experiments.experiments_factory import ExperimentsFactory
 from experiments.experiment import Experiment
 from experiments.experiment_listener import ExperimentListener
-from ga.genetic_operators.mutation3 import Mutation3
-from ga.genetic_operators.mutation2 import Mutation2
+from ga.genetic_operators.mutationpartialinversion import MutationPartialInversion
+from ga.genetic_operators.mutationswitchandshift import MutationSwitchandShift
 from ga.selection_methods.tournament import Tournament
-from ga.genetic_operators.recombination2 import Recombination2
+from ga.genetic_operators.recombinationcrossovercycle import RecombinationCrossoverCycle
 from ga.genetic_operators.recombination_pmx import RecombinationPMX
-from ga.genetic_operators.recombination3 import Recombination3
+from ga.genetic_operators.recombinationcrossoverorder1 import RecombinationCrossoverOrder1
 from ga.genetic_operators.mutation_insert import MutationInsert
 from ga.genetic_algorithm import GeneticAlgorithm
 from experiments_statistics.statistic_best_in_run import StatisticBestInRun
 from experiments_statistics.statistic_best_average import StatisticBestAverage
+from warehouse.cell import Cell
 from warehouse.warehouse_agent_search import read_state_from_txt_file, WarehouseAgentSearch
 from warehouse.warehouse_problemforGA import WarehouseProblemGA
+from warehouse.warehouse_problemforSearch import WarehouseProblemSearch
 from warehouse.warehouse_state import WarehouseState
 
 
@@ -44,26 +49,28 @@ class WarehouseExperimentsFactory(ExperimentsFactory):
         match self.get_parameter_value('Recombination'):
             case 'pmx':
                 self.recombination_method = RecombinationPMX(recombination_probability)
-            case 'recombination2':
-                self.recombination_method = Recombination2(recombination_probability)
-            case 'recombination3':
-                self.recombination_method = Recombination3(recombination_probability)
+            case 'recombinationCrossoverCycle':
+                self.recombination_method = RecombinationCrossoverCycle(recombination_probability)
+            case 'recombinationCrossoverOrder1':
+                self.recombination_method = RecombinationCrossoverOrder1(recombination_probability)
 
         # MUTATION
         mutation_probability = float(self.get_parameter_value('Mutation_probability'))
         match self.get_parameter_value('Mutation'):
             case 'insert':
                 self.mutation_method = MutationInsert(mutation_probability)
-            case 'mutation2':
-                self.mutation_method = Mutation2(mutation_probability)
-            case 'mutation3':
-                self.mutation_method = Mutation3(mutation_probability)
+            case 'mutationSwitchandShift':
+                self.mutation_method = MutationSwitchandShift(mutation_probability)
+            case 'mutationPartialInversion':
+                self.mutation_method = MutationPartialInversion(mutation_probability)
 
         # PROBLEM
         matrix, num_rows, num_columns = read_state_from_txt_file(self.get_parameter_value("Problem_file"))
 
         agent_search = WarehouseAgentSearch(WarehouseState(matrix, num_rows, num_columns))
         # TODO calculate pair distances
+        self.calculate_pair_distances(agent_search)
+
         self.problem = WarehouseProblemGA(agent_search)
 
         experiment_textual_representation = self.build_experiment_textual_representation()
@@ -85,6 +92,39 @@ class WarehouseExperimentsFactory(ExperimentsFactory):
             self.experiment.add_listener(statistic)
 
         return self.experiment
+
+    def calculate_pair_distances(self, agent: WarehouseAgentSearch):
+        for i in range(len(agent.pairs)):
+            # Problem novo:
+            # Em cada par colocar o fk na cell1
+            fk: Cell = agent.pairs[i].cell1
+            goal: Cell = copy.copy(agent.pairs[i].cell2)
+
+            # fazer um deepcopy do estado inicial
+            estado_inicial: WarehouseState = copy.copy(agent.initial_environment)
+            if (fk in agent.forklifts):
+                estado_inicial.line_forklift = fk.line
+                estado_inicial.column_forklift = fk.column
+            else:
+                if fk.column +1 < estado_inicial.columns and estado_inicial.matrix[fk.line][fk.column + 1] == constants.EMPTY:
+                    estado_inicial.line_forklift = fk.line
+                    estado_inicial.column_forklift = fk.column + 1
+                else:
+                    estado_inicial.line_forklift = fk.line
+                    estado_inicial.column_forklift = fk.column - 1
+
+            if goal != agent.exit:
+                if goal.column + 1 < estado_inicial.columns and estado_inicial.matrix[goal.line][goal.column + 1] == constants.EMPTY:
+                    goal.column += 1
+                else:
+                    goal.column -= 1
+
+            problem = WarehouseProblemSearch(estado_inicial, goal)
+            # aplicar o shearch method com o goal_state
+            solution = agent.solve_problem(problem)
+            # na solução ir buscar o custo -> este custo vai ser a distancia entre as células dos pares
+            agent.pairs[i].value = solution.cost
+            agent.pairs[i].positions = solution.positions
 
     def generate_ga_instance(self, seed: int) -> GeneticAlgorithm:
         ga = GeneticAlgorithm(
