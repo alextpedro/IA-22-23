@@ -1,0 +1,696 @@
+
+Population size: 50
+Max generations: 40
+Selection: Tournament selection(2)
+Recombination: PMX recombination (0.6)
+Mutation:Insert Mutation (0.03)
+Fitness: 562
+[18, 40, 38, 32, 36, 37, 20, 17, 41, 39, 22, 1, 2, 6, 10, 12, 4, 9, 13, 43, 27, 29, 30, 31, 35, 21, 26, 28, 25, 15, 16, 11, 42, 24, 14, 33, 34, 8, 7, 3, 23, 19, 5]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(2)
+Recombination: PMX recombination (0.6)
+Mutation:Insert Mutation (0.01)
+Fitness: 674
+[40, 28, 29, 22, 21, 26, 39, 35, 42, 12, 11, 15, 18, 20, 10, 9, 4, 16, 43, 2, 6, 1, 19, 5, 7, 3, 13, 30, 8, 41, 32, 37, 25, 31, 38, 17, 36, 33, 27, 24, 34, 23, 14]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(2)
+Recombination: PMX recombination (0.6)
+Mutation:Insert Mutation (0.025)
+Fitness: 661
+[29, 24, 37, 39, 7, 4, 8, 5, 43, 25, 14, 40, 32, 38, 28, 23, 21, 16, 11, 41, 22, 1, 10, 27, 17, 26, 19, 3, 42, 31, 20, 30, 34, 33, 35, 36, 13, 12, 15, 6, 2, 9, 18]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(2)
+Recombination: PMX recombination (0.6)
+Mutation:Insert Mutation (0.03)
+Fitness: 714
+[1, 19, 29, 14, 10, 15, 36, 33, 21, 3, 41, 30, 28, 32, 6, 7, 9, 27, 31, 42, 23, 22, 4, 8, 16, 38, 18, 12, 2, 5, 43, 40, 35, 39, 26, 17, 11, 13, 24, 34, 37, 25, 20]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(2)
+Recombination: PMX recombination (0.7)
+Mutation:Insert Mutation (0.01)
+Fitness: 692
+[2, 19, 21, 20, 23, 10, 27, 24, 29, 28, 4, 11, 41, 22, 39, 30, 32, 37, 40, 25, 16, 15, 38, 17, 14, 43, 34, 33, 12, 9, 8, 13, 18, 5, 35, 36, 31, 26, 6, 1, 42, 7, 3]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(2)
+Recombination: PMX recombination (0.7)
+Mutation:Insert Mutation (0.025)
+Fitness: 664
+[39, 37, 26, 22, 28, 34, 31, 38, 20, 32, 12, 16, 5, 41, 17, 25, 14, 4, 11, 18, 40, 36, 35, 21, 15, 23, 3, 43, 29, 10, 13, 9, 7, 19, 30, 33, 27, 24, 42, 8, 6, 1, 2]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(2)
+Recombination: PMX recombination (0.7)
+Mutation:Insert Mutation (0.03)
+Fitness: 655
+[35, 36, 40, 29, 33, 20, 27, 19, 39, 41, 14, 11, 12, 18, 32, 23, 24, 4, 3, 42, 34, 22, 21, 26, 28, 30, 17, 1, 6, 2, 7, 43, 16, 37, 31, 38, 15, 25, 9, 8, 13, 10, 5]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(2)
+Recombination: PMX recombination (0.8)
+Mutation:Insert Mutation (0.01)
+Fitness: 692
+[1, 2, 6, 11, 38, 28, 14, 22, 29, 13, 5, 4, 9, 43, 41, 32, 35, 33, 39, 23, 7, 3, 17, 20, 16, 15, 12, 27, 30, 36, 21, 19, 26, 24, 8, 10, 42, 37, 40, 34, 18, 25, 31]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(2)
+Recombination: PMX recombination (0.8)
+Mutation:Insert Mutation (0.025)
+Fitness: 701
+[28, 33, 31, 17, 42, 2, 6, 1, 22, 10, 11, 20, 38, 36, 30, 32, 26, 18, 41, 3, 16, 25, 24, 39, 14, 21, 19, 4, 8, 12, 43, 5, 15, 13, 9, 34, 40, 37, 35, 23, 29, 27, 7]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(2)
+Recombination: PMX recombination (0.8)
+Mutation:Insert Mutation (0.03)
+Fitness: 678
+[29, 15, 16, 10, 6, 19, 4, 22, 26, 24, 21, 5, 41, 23, 7, 8, 20, 18, 14, 1, 2, 43, 27, 33, 38, 36, 35, 32, 25, 31, 37, 34, 40, 17, 11, 12, 42, 3, 9, 13, 30, 39, 28]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(4)
+Recombination: PMX recombination (0.6)
+Mutation:Insert Mutation (0.01)
+Fitness: 612
+[1, 2, 7, 8, 3, 9, 19, 32, 13, 14, 43, 40, 35, 34, 38, 31, 16, 10, 4, 42, 24, 17, 37, 36, 25, 30, 28, 27, 39, 20, 18, 11, 41, 26, 29, 23, 21, 15, 12, 33, 22, 6, 5]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(4)
+Recombination: PMX recombination (0.6)
+Mutation:Insert Mutation (0.025)
+Fitness: 678
+[20, 22, 28, 40, 37, 17, 10, 3, 1, 16, 15, 11, 43, 21, 14, 24, 34, 33, 19, 9, 8, 7, 6, 4, 25, 41, 26, 12, 30, 32, 29, 39, 35, 27, 23, 2, 42, 13, 31, 38, 36, 18, 5]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(4)
+Recombination: PMX recombination (0.6)
+Mutation:Insert Mutation (0.03)
+Fitness: 650
+[9, 13, 11, 14, 27, 33, 30, 2, 1, 41, 24, 28, 31, 37, 39, 26, 21, 6, 5, 4, 8, 42, 38, 18, 17, 20, 22, 34, 40, 12, 15, 10, 7, 3, 43, 19, 32, 25, 29, 23, 36, 35, 16]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(4)
+Recombination: PMX recombination (0.7)
+Mutation:Insert Mutation (0.01)
+Fitness: 639
+[28, 17, 8, 23, 19, 10, 31, 37, 38, 25, 12, 11, 18, 43, 42, 15, 16, 34, 32, 27, 26, 13, 9, 14, 30, 24, 22, 6, 2, 3, 41, 39, 21, 20, 40, 35, 36, 33, 29, 7, 1, 4, 5]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(4)
+Recombination: PMX recombination (0.7)
+Mutation:Insert Mutation (0.025)
+Fitness: 623
+[6, 21, 25, 15, 28, 34, 30, 29, 24, 13, 18, 42, 12, 17, 31, 10, 4, 5, 43, 2, 19, 26, 22, 23, 27, 14, 20, 8, 1, 3, 7, 41, 37, 33, 39, 38, 40, 9, 35, 36, 32, 16, 11]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(4)
+Recombination: PMX recombination (0.7)
+Mutation:Insert Mutation (0.03)
+Fitness: 606
+[18, 25, 31, 38, 40, 26, 39, 27, 30, 28, 32, 20, 15, 11, 41, 22, 1, 9, 13, 43, 23, 3, 6, 21, 2, 7, 5, 4, 42, 10, 19, 29, 33, 34, 37, 35, 36, 24, 14, 12, 17, 16, 8]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(4)
+Recombination: PMX recombination (0.8)
+Mutation:Insert Mutation (0.01)
+Fitness: 606
+[21, 34, 24, 28, 23, 18, 8, 10, 5, 43, 22, 19, 14, 26, 33, 29, 27, 13, 25, 16, 11, 41, 9, 2, 6, 3, 7, 12, 15, 37, 31, 38, 36, 40, 35, 42, 39, 30, 32, 20, 17, 4, 1]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(4)
+Recombination: PMX recombination (0.8)
+Mutation:Insert Mutation (0.025)
+Fitness: 608
+[31, 23, 34, 33, 36, 35, 38, 18, 15, 16, 12, 7, 1, 6, 43, 28, 29, 21, 17, 3, 13, 8, 14, 10, 4, 41, 2, 11, 5, 42, 39, 19, 9, 30, 32, 24, 22, 26, 27, 25, 37, 40, 20]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(4)
+Recombination: PMX recombination (0.8)
+Mutation:Insert Mutation (0.03)
+Fitness: 638
+[7, 13, 30, 27, 24, 8, 15, 10, 32, 25, 23, 18, 11, 42, 34, 33, 14, 31, 37, 39, 21, 3, 5, 43, 38, 40, 36, 35, 26, 29, 28, 16, 17, 41, 12, 4, 19, 22, 6, 2, 1, 9, 20]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(6)
+Recombination: PMX recombination (0.6)
+Mutation:Insert Mutation (0.01)
+Fitness: 595
+[16, 25, 24, 32, 31, 30, 27, 23, 29, 42, 2, 22, 26, 18, 11, 7, 12, 8, 13, 10, 4, 1, 6, 3, 43, 33, 34, 35, 36, 38, 39, 37, 40, 5, 41, 21, 19, 14, 28, 15, 17, 20, 9]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(6)
+Recombination: PMX recombination (0.6)
+Mutation:Insert Mutation (0.025)
+Fitness: 652
+[18, 12, 16, 2, 1, 3, 7, 22, 8, 20, 42, 39, 26, 21, 37, 35, 36, 31, 38, 27, 6, 4, 41, 30, 34, 33, 24, 29, 25, 14, 5, 43, 10, 11, 17, 9, 19, 23, 28, 13, 15, 40, 32]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(6)
+Recombination: PMX recombination (0.6)
+Mutation:Insert Mutation (0.03)
+Fitness: 671
+[38, 37, 40, 33, 36, 34, 31, 29, 22, 19, 25, 20, 15, 24, 11, 18, 43, 32, 16, 12, 4, 5, 42, 27, 17, 13, 6, 10, 9, 8, 14, 41, 30, 7, 1, 2, 3, 35, 39, 26, 21, 23, 28]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(6)
+Recombination: PMX recombination (0.7)
+Mutation:Insert Mutation (0.01)
+Fitness: 656
+[27, 24, 42, 38, 18, 11, 20, 25, 34, 30, 29, 33, 36, 17, 41, 12, 5, 2, 6, 1, 9, 7, 14, 15, 16, 4, 43, 19, 23, 28, 26, 22, 39, 31, 37, 32, 40, 35, 8, 13, 21, 10, 3]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(6)
+Recombination: PMX recombination (0.7)
+Mutation:Insert Mutation (0.025)
+Fitness: 619
+[21, 23, 13, 8, 14, 27, 30, 24, 33, 34, 40, 38, 35, 36, 29, 18, 12, 5, 41, 39, 32, 31, 16, 19, 9, 22, 26, 1, 3, 10, 4, 42, 25, 11, 15, 43, 7, 2, 6, 17, 20, 37, 28]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(6)
+Recombination: PMX recombination (0.7)
+Mutation:Insert Mutation (0.03)
+Fitness: 618
+[32, 28, 33, 34, 3, 2, 22, 39, 42, 21, 23, 19, 6, 43, 29, 26, 14, 8, 1, 4, 9, 7, 10, 11, 25, 5, 41, 30, 37, 35, 36, 40, 38, 31, 20, 27, 24, 17, 15, 16, 13, 12, 18]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(6)
+Recombination: PMX recombination (0.8)
+Mutation:Insert Mutation (0.01)
+Fitness: 622
+[3, 6, 1, 8, 12, 18, 41, 39, 29, 4, 2, 9, 7, 5, 42, 34, 40, 28, 35, 17, 25, 14, 30, 33, 36, 32, 37, 38, 16, 15, 10, 43, 19, 23, 21, 26, 27, 13, 31, 24, 22, 20, 11]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(6)
+Recombination: PMX recombination (0.8)
+Mutation:Insert Mutation (0.025)
+Fitness: 610
+[11, 7, 1, 2, 6, 29, 28, 32, 13, 17, 3, 4, 43, 18, 22, 19, 10, 12, 14, 21, 26, 24, 16, 9, 8, 5, 41, 15, 20, 35, 36, 30, 27, 23, 40, 34, 33, 39, 38, 31, 42, 37, 25]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(6)
+Recombination: PMX recombination (0.8)
+Mutation:Insert Mutation (0.03)
+Fitness: 627
+[7, 8, 10, 4, 12, 26, 34, 37, 11, 43, 28, 36, 40, 38, 32, 35, 31, 18, 20, 5, 41, 2, 16, 25, 17, 42, 39, 27, 29, 21, 6, 1, 3, 9, 14, 24, 33, 30, 23, 15, 13, 22, 19]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(8)
+Recombination: PMX recombination (0.6)
+Mutation:Insert Mutation (0.01)
+Fitness: 697
+[38, 34, 30, 27, 22, 21, 2, 1, 43, 26, 33, 29, 39, 19, 13, 18, 12, 17, 41, 7, 15, 10, 8, 5, 14, 11, 4, 42, 25, 36, 9, 16, 23, 28, 35, 24, 32, 40, 37, 31, 20, 3, 6]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(8)
+Recombination: PMX recombination (0.6)
+Mutation:Insert Mutation (0.025)
+Fitness: 667
+[39, 27, 28, 25, 21, 19, 8, 16, 15, 1, 2, 4, 7, 42, 26, 10, 31, 37, 35, 34, 29, 6, 43, 13, 24, 30, 5, 11, 9, 3, 41, 14, 22, 33, 36, 40, 38, 32, 17, 23, 12, 20, 18]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(8)
+Recombination: PMX recombination (0.6)
+Mutation:Insert Mutation (0.03)
+Fitness: 623
+[33, 32, 12, 10, 4, 8, 7, 26, 21, 22, 30, 19, 23, 42, 17, 5, 43, 37, 40, 18, 20, 13, 39, 29, 27, 28, 31, 15, 16, 11, 41, 2, 24, 34, 36, 35, 25, 38, 14, 9, 3, 1, 6]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(8)
+Recombination: PMX recombination (0.7)
+Mutation:Insert Mutation (0.01)
+Fitness: 664
+[4, 9, 19, 17, 12, 43, 32, 16, 24, 30, 28, 23, 2, 41, 1, 27, 7, 3, 6, 21, 26, 22, 38, 33, 34, 18, 42, 31, 37, 39, 29, 35, 36, 20, 25, 40, 10, 8, 11, 14, 13, 15, 5]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(8)
+Recombination: PMX recombination (0.7)
+Mutation:Insert Mutation (0.025)
+Fitness: 618
+[31, 17, 20, 14, 7, 8, 9, 4, 10, 22, 13, 42, 39, 36, 34, 21, 26, 28, 15, 24, 1, 6, 2, 3, 41, 27, 30, 23, 16, 18, 11, 37, 5, 43, 19, 29, 33, 32, 35, 40, 38, 25, 12]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(8)
+Recombination: PMX recombination (0.7)
+Mutation:Insert Mutation (0.03)
+Fitness: 596
+[31, 30, 28, 24, 14, 40, 37, 38, 41, 27, 9, 7, 13, 19, 26, 21, 6, 43, 39, 29, 36, 32, 35, 22, 23, 34, 33, 25, 18, 3, 2, 1, 42, 8, 12, 16, 4, 10, 20, 17, 15, 11, 5]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(8)
+Recombination: PMX recombination (0.8)
+Mutation:Insert Mutation (0.01)
+Fitness: 672
+[31, 27, 36, 14, 10, 12, 9, 23, 26, 2, 1, 3, 41, 6, 8, 4, 13, 21, 19, 25, 42, 38, 40, 18, 37, 20, 32, 33, 34, 35, 39, 29, 22, 7, 43, 15, 5, 30, 28, 24, 16, 17, 11]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(8)
+Recombination: PMX recombination (0.8)
+Mutation:Insert Mutation (0.025)
+Fitness: 596
+[27, 8, 19, 26, 21, 7, 3, 9, 43, 20, 15, 29, 22, 1, 6, 2, 12, 18, 14, 4, 5, 42, 31, 25, 13, 24, 30, 17, 10, 23, 41, 36, 32, 40, 37, 33, 34, 39, 38, 35, 28, 16, 11]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 20
+Selection: Tournament selection(8)
+Recombination: PMX recombination (0.8)
+Mutation:Insert Mutation (0.03)
+Fitness: 626
+[5, 11, 16, 12, 43, 38, 35, 28, 30, 18, 41, 32, 24, 20, 17, 9, 10, 33, 34, 25, 22, 26, 21, 29, 23, 14, 8, 42, 39, 36, 40, 37, 31, 15, 13, 1, 6, 2, 3, 19, 7, 27, 4]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 40
+Selection: Tournament selection(2)
+Recombination: PMX recombination (0.6)
+Mutation:Insert Mutation (0.01)
+Fitness: 607
+[20, 15, 28, 23, 27, 19, 17, 11, 12, 14, 3, 8, 2, 6, 5, 43, 26, 30, 33, 36, 7, 9, 1, 41, 4, 13, 16, 10, 42, 25, 40, 37, 22, 21, 24, 35, 34, 39, 29, 32, 38, 31, 18]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 40
+Selection: Tournament selection(2)
+Recombination: PMX recombination (0.6)
+Mutation:Insert Mutation (0.025)
+Fitness: 617
+[31, 28, 27, 39, 38, 33, 32, 36, 35, 30, 34, 16, 43, 21, 9, 29, 37, 40, 42, 14, 2, 6, 7, 3, 12, 23, 22, 17, 20, 11, 5, 41, 26, 1, 13, 4, 10, 8, 19, 15, 24, 25, 18]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 40
+Selection: Tournament selection(2)
+Recombination: PMX recombination (0.6)
+Mutation:Insert Mutation (0.03)
+Fitness: 629
+[14, 17, 10, 13, 6, 2, 4, 3, 1, 43, 37, 22, 21, 9, 20, 8, 5, 41, 15, 36, 38, 40, 24, 12, 18, 31, 33, 30, 25, 11, 42, 35, 34, 32, 39, 26, 19, 27, 23, 29, 28, 7, 16]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 40
+Selection: Tournament selection(2)
+Recombination: PMX recombination (0.7)
+Mutation:Insert Mutation (0.01)
+Fitness: 596
+[6, 26, 22, 13, 14, 8, 9, 25, 34, 29, 27, 7, 42, 1, 2, 4, 16, 3, 15, 21, 24, 20, 12, 18, 10, 41, 11, 43, 39, 33, 28, 19, 23, 30, 36, 35, 40, 32, 37, 38, 31, 17, 5]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 40
+Selection: Tournament selection(2)
+Recombination: PMX recombination (0.7)
+Mutation:Insert Mutation (0.025)
+Fitness: 607
+[35, 38, 32, 40, 37, 18, 13, 24, 22, 26, 29, 4, 11, 43, 16, 15, 10, 30, 28, 19, 21, 23, 27, 3, 7, 5, 20, 41, 14, 17, 8, 6, 42, 34, 33, 39, 36, 25, 31, 12, 9, 2, 1]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 40
+Selection: Tournament selection(2)
+Recombination: PMX recombination (0.7)
+Mutation:Insert Mutation (0.03)
+Fitness: 611
+[14, 30, 22, 26, 21, 29, 16, 17, 12, 8, 15, 20, 40, 37, 31, 25, 18, 43, 27, 39, 32, 24, 13, 9, 5, 11, 41, 6, 3, 7, 19, 10, 23, 28, 36, 34, 33, 35, 38, 4, 1, 2, 42]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 40
+Selection: Tournament selection(2)
+Recombination: PMX recombination (0.8)
+Mutation:Insert Mutation (0.01)
+Fitness: 582
+[31, 38, 40, 37, 35, 33, 30, 3, 1, 2, 6, 22, 29, 23, 16, 18, 11, 41, 25, 28, 36, 32, 26, 14, 9, 43, 15, 12, 10, 19, 21, 24, 27, 7, 4, 13, 8, 42, 39, 34, 5, 17, 20]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 40
+Selection: Tournament selection(2)
+Recombination: PMX recombination (0.8)
+Mutation:Insert Mutation (0.025)
+Fitness: 592
+[22, 27, 7, 6, 3, 2, 8, 10, 18, 5, 42, 15, 24, 26, 19, 13, 16, 9, 20, 12, 1, 43, 39, 34, 17, 32, 30, 37, 40, 25, 11, 41, 31, 28, 35, 36, 38, 33, 29, 23, 21, 14, 4]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 40
+Selection: Tournament selection(2)
+Recombination: PMX recombination (0.8)
+Mutation:Insert Mutation (0.03)
+Fitness: 584
+[23, 24, 35, 38, 26, 22, 21, 19, 10, 8, 13, 4, 41, 34, 33, 18, 12, 9, 2, 7, 3, 1, 43, 14, 16, 37, 32, 27, 39, 29, 36, 40, 20, 17, 11, 42, 5, 15, 25, 31, 28, 30, 6]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 40
+Selection: Tournament selection(4)
+Recombination: PMX recombination (0.6)
+Mutation:Insert Mutation (0.01)
+Fitness: 639
+[26, 19, 29, 9, 7, 11, 15, 20, 18, 31, 38, 17, 43, 6, 8, 14, 22, 3, 1, 42, 10, 13, 4, 2, 21, 23, 30, 32, 40, 37, 12, 5, 41, 36, 35, 34, 25, 16, 39, 27, 28, 33, 24]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 40
+Selection: Tournament selection(4)
+Recombination: PMX recombination (0.6)
+Mutation:Insert Mutation (0.025)
+Fitness: 601
+[40, 37, 17, 29, 26, 28, 25, 8, 24, 10, 13, 12, 42, 7, 27, 3, 19, 21, 2, 1, 6, 4, 14, 16, 15, 43, 34, 33, 36, 35, 32, 31, 11, 5, 41, 38, 39, 30, 23, 9, 22, 20, 18]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 40
+Selection: Tournament selection(4)
+Recombination: PMX recombination (0.6)
+Mutation:Insert Mutation (0.03)
+Fitness: 589
+[32, 25, 31, 15, 7, 23, 19, 10, 14, 9, 3, 6, 1, 43, 36, 34, 33, 37, 38, 35, 30, 40, 24, 17, 18, 41, 16, 20, 5, 11, 42, 39, 12, 8, 13, 29, 28, 27, 21, 26, 22, 2, 4]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 40
+Selection: Tournament selection(4)
+Recombination: PMX recombination (0.7)
+Mutation:Insert Mutation (0.01)
+Fitness: 629
+[14, 12, 5, 18, 20, 16, 34, 32, 30, 26, 27, 22, 21, 6, 1, 42, 23, 36, 25, 11, 8, 7, 41, 39, 17, 31, 43, 2, 3, 9, 4, 10, 19, 29, 37, 38, 40, 35, 33, 28, 24, 13, 15]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 40
+Selection: Tournament selection(4)
+Recombination: PMX recombination (0.7)
+Mutation:Insert Mutation (0.025)
+Fitness: 589
+[6, 2, 4, 5, 20, 22, 7, 41, 34, 39, 19, 16, 15, 27, 21, 26, 29, 23, 14, 13, 17, 11, 42, 18, 10, 24, 30, 36, 35, 12, 3, 1, 9, 43, 37, 28, 33, 40, 32, 25, 38, 31, 8]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 40
+Selection: Tournament selection(4)
+Recombination: PMX recombination (0.7)
+Mutation:Insert Mutation (0.03)
+Fitness: 600
+[21, 24, 12, 13, 30, 35, 40, 28, 36, 39, 38, 11, 41, 29, 34, 33, 37, 32, 25, 18, 16, 23, 1, 6, 42, 31, 26, 19, 22, 27, 15, 10, 20, 17, 14, 8, 5, 43, 3, 7, 9, 4, 2]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 40
+Selection: Tournament selection(4)
+Recombination: PMX recombination (0.8)
+Mutation:Insert Mutation (0.01)
+Fitness: 626
+[35, 30, 26, 39, 28, 23, 40, 32, 16, 19, 14, 12, 42, 36, 31, 29, 8, 10, 7, 4, 13, 15, 27, 2, 1, 6, 5, 43, 3, 9, 41, 18, 20, 25, 34, 37, 38, 33, 24, 22, 21, 17, 11]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 40
+Selection: Tournament selection(4)
+Recombination: PMX recombination (0.8)
+Mutation:Insert Mutation (0.025)
+Fitness: 582
+[2, 22, 37, 38, 31, 25, 23, 14, 41, 36, 40, 35, 15, 20, 33, 34, 30, 29, 18, 11, 42, 39, 32, 26, 21, 19, 10, 9, 16, 43, 1, 6, 8, 3, 7, 4, 24, 12, 13, 27, 28, 17, 5]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 40
+Selection: Tournament selection(4)
+Recombination: PMX recombination (0.8)
+Mutation:Insert Mutation (0.03)
+Fitness: 594
+[2, 1, 4, 8, 33, 34, 13, 9, 22, 6, 3, 41, 31, 35, 36, 40, 37, 32, 30, 21, 27, 16, 42, 14, 20, 25, 38, 26, 28, 24, 23, 10, 5, 43, 39, 29, 7, 12, 18, 17, 15, 19, 11]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 40
+Selection: Tournament selection(6)
+Recombination: PMX recombination (0.6)
+Mutation:Insert Mutation (0.01)
+Fitness: 676
+[14, 5, 7, 3, 34, 32, 30, 25, 17, 16, 41, 40, 38, 35, 28, 29, 2, 9, 15, 23, 8, 4, 11, 43, 18, 20, 10, 13, 21, 6, 1, 19, 12, 42, 36, 31, 24, 37, 39, 33, 27, 22, 26]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 40
+Selection: Tournament selection(6)
+Recombination: PMX recombination (0.6)
+Mutation:Insert Mutation (0.025)
+Fitness: 611
+[24, 23, 2, 6, 8, 13, 15, 26, 19, 12, 20, 43, 33, 36, 39, 35, 32, 21, 22, 1, 41, 30, 29, 31, 38, 37, 40, 34, 4, 16, 18, 42, 17, 25, 28, 14, 10, 11, 5, 27, 9, 3, 7]
+
+
+
+# --------------------------------------------------------------
+
+Population size: 50
+Max generations: 40
+Selection: Tournament selection(6)
+Recombination: PMX recombination (0.6)
+Mutation:Insert Mutation (0.03)
+Fitness: 602
+[31, 37, 40, 26, 27, 23, 13, 4, 2, 42, 21, 5, 17, 12, 7, 1, 19, 10, 9, 41, 6, 22, 33, 24, 15, 14, 8, 3, 43, 39, 34, 35, 36, 29, 38, 32, 30, 28, 16, 11, 18, 25, 20]
+
+
+
+# --------------------------------------------------------------

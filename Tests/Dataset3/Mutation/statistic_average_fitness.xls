@@ -1,0 +1,5 @@
+Population size:	Max generations: 	Selection: 	Recombination: 	Mutation:		Average:	StdDev:
+100	100	Tournament selection(2)	PMX recombination (0.7)	Insert Mutation (0.1)		166.36	16.615366381756377
+100	100	Tournament selection(2)	PMX recombination (0.7)	Insert Mutation (0.2)		167.08	11.417250106746371
+100	100	Tournament selection(2)	PMX recombination (0.7)	Insert Mutation (0.5)		226.38	10.9268293662892
+100	100	Tournament selection(2)	PMX recombination (0.7)	Insert Mutation (0.6)		230.8	9.91564420499243
